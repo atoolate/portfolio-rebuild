@@ -16,12 +16,16 @@
   /* font variables */
   --font-family-body: 'Cabin', sans-serif;
 
+  /* layout variables */
+  --container-max-width: 1200px;
+  --container-padding: clamp(1.5rem, 5vw, 4rem);
+  --section-spacing: clamp(2rem, 8vw, 6rem);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 body {
   margin: 0;

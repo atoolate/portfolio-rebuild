@@ -13,6 +13,10 @@ import Banner from './Banner.vue'
 </template>
 
 <style scoped>
+.hero {
+  margin-bottom: var(--section-spacing);
+}
+
 h1 {
   font-size: 2em;
   color: var(--text-color);

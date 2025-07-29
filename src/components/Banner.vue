@@ -34,15 +34,14 @@
     opacity: 1;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 }
 
 span {
   font-weight: 300;
   font-size: 0.8em;
-  font-style: italic;
   text-transform: uppercase;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 </style>

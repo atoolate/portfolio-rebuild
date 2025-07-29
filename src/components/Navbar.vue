@@ -60,9 +60,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3em;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  margin-bottom: var(--section-spacing);
 }
 ul {
   list-style: none;
