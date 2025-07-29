@@ -88,6 +88,7 @@ const navigateToWork = () => {
   flex-direction: column;
   align-items: flex-end;
   gap: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cover-image {
