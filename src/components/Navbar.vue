@@ -6,7 +6,7 @@
   <div class="navbar">
     <nav>
       <div class="avatar-container">
-        <img src="../assets/alexAvatar.png" alt="favicon" class="avatar" />
+        <img src="../assets/avatarAlex.png" alt="favicon" class="avatar" />
         <div class="avatar-text">
           <span class="avatar-name">Alex</span>
           <span>|</span>
