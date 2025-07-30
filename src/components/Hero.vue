@@ -14,8 +14,22 @@ import Banner from './Banner.vue'
 
 <style scoped>
 .hero {
-  margin-bottom: var(--section-spacing);
+  margin: var(--section-spacing) 0;
+  max-width: 55vw;
 }
+
+@media screen and (max-width: 768px) {
+  .hero {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  
+}
+
+
 
 h1 {
   font-size: 2em;
@@ -23,7 +37,6 @@ h1 {
   margin-top: 20px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-  max-width: 55vw;
 }
 
 span {
