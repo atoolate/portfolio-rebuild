@@ -15,6 +15,7 @@
 
   /* font variables */
   --font-family-body: 'Cabin', sans-serif;
+  --font-family-heading: 'Ubuntu', sans-serif;
 
   /* layout variables */
   --container-max-width: 1200px;

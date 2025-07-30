@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import Navbar from '../components/Navbar.vue'
 import Hero from '../components/Hero.vue'
 import WorkOverview from '../components/WorkOverview.vue'
-
+import AboutMe from '../components/AboutMe.vue'
 const count = ref(0)
 
 </script>
@@ -13,6 +13,7 @@ const count = ref(0)
     <Navbar />
     <main>
         <Hero />
+        <AboutMe />
         <WorkOverview />
     </main>
   </body>
