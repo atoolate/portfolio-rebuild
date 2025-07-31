@@ -1,5 +1,8 @@
 <script setup>
 import { defineProps } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const props = defineProps({
   title: {
@@ -25,8 +28,9 @@ const props = defineProps({
 })
 
 const navigateToWork = () => {
-  // Navigate to work detail page - you can implement router logic here
-  console.log('Navigate to work:', props.projectId)
+  if (!props.comingSoon) {
+    router.push(`/work/${props.projectId}`)
+  }
 }
 </script>
 
@@ -36,6 +40,7 @@ const navigateToWork = () => {
     <div v-if="comingSoon" class="coming-soon-tag">Coming Soon</div>
     
     <div class="folder-tab">
+        <span class="folder-work">work/</span>
       <span class="folder-title">{{ title }}</span>
     </div>
     <div class="folder-content">
@@ -48,7 +53,7 @@ const navigateToWork = () => {
     </div>
   </div>
 </template>
-
+ 
 <style scoped>
 .folder {
   width: 280px;
@@ -72,10 +77,20 @@ const navigateToWork = () => {
   min-width: 120px;
 }
 
+.folder-work {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  color: var(--text-color);
+  font-size: 0.9em;
+  opacity: 0.5;
+  font-weight:100;
+}
+
 .folder-title {
   font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight:500;
   color: var(--text-color);
 }
 

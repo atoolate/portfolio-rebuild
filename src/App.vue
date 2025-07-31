@@ -1,9 +1,9 @@
 <script setup>
-import Home from './views/Home.vue';
+// Router will handle the component rendering
 </script>
 
 <template>
-  <Home msg="Portfolio" />
+  <router-view />
 </template>
 
 <style scoped>

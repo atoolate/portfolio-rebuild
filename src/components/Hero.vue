@@ -30,6 +30,7 @@ const openTerminal = () => {
 <style scoped>
 .hero {
   max-width: 55vw;
+  padding-right: 10vw;
 }
 
 @media screen and (max-width: 768px) {

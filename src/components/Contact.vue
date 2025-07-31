@@ -9,7 +9,6 @@
       
       <div class="contact-action">
         <a href="mailto:alexdelaet00@gmail.com" class="email-button">
-          <span class="email-icon">@</span>
           alexdelaet00@gmail.com
         </a>
       </div>
