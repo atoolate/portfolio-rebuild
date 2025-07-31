@@ -75,6 +75,38 @@ nav {
   flex-shrink: 0;
 }
 
+.navbar-cta button {
+  background: rgba(255, 103, 77, 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(255, 103, 77, 0.2);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  white-space: nowrap;
+}
+
+.navbar-cta button:hover {
+  background: rgba(255, 103, 77, 0.15);
+  border-color: rgba(255, 103, 77, 0.4);
+  transform: translateY(-1px);
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+  color: var(--primary-color);
+}
+
+.navbar-cta button:hover .arrow {
+  transform: translateX(2px);
+}
+
 /* Responsive Breakpoints */
 
 /* Responsive Breakpoints */

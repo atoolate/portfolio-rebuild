@@ -106,41 +106,47 @@ const navigateToWork = () => {
 }
 
 .view-button {
-  background-color: var(--text-color);
-  color: white;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
+  background: rgba(26, 26, 26, 0.95);
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 8px 16px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 0.85em;
   font-weight: 400;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
 }
 
 .view-button .arrow {
   opacity: 0;
-  transform: translateX(-5px);
+  transform: translateX(-10px);
   transition: all 0.2s ease;
-  display: inline-block;
+  color: var(--primary-color);
   width: 0;
+  margin-left: 0;
 }
 
 .view-button:hover {
-  background-color: var(--primary-color);
-  transform: translateY(-1px);
-  padding: 8px 24px;
+  background: rgba(26, 26, 26, 1);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  gap: 0.5rem;
 }
 
 .view-button:hover .arrow {
   opacity: 1;
   transform: translateX(0);
   width: auto;
-}
-.view-button:hover span {
-  padding-left: 5px;
+  margin-left: 0.25rem;
 }
 
 /* Coming Soon Styles */
