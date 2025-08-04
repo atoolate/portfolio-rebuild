@@ -63,6 +63,24 @@ const scrollToContact = () =>
 .avatar-location {
   font-weight: 300;
 }
+
+/* responsive styles */
+@media (max-width: 480px) {
+  .avatar-container {
+    width: auto;
+  }
+  
+  .avatar {
+    width: 36px;
+  }
+  
+  .avatar-text {
+    font-size: 0.75em;
+    gap: 0.1em;
+  }
+
+}
+
 .navbar {
   color: var(--text-color);
   padding: 1em 0;

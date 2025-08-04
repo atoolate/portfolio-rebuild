@@ -220,4 +220,11 @@ const navigateToWork = () => {
     font-size: 0.75rem;
   }
 }
+
+/* mobile, hide action buttons and avoid overflow */
+@media (max-width: 480px) {
+  .folder-actions {
+    display: none; /* Hide action buttons on mobile */
+  }
+}
 </style>
