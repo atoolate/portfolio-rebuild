@@ -1,5 +1,17 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+
+const scrollToContact = () => 
+      setTimeout(() => {
+        const contactSection = document.querySelector('#contact')
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
 
 </script>
 
@@ -16,7 +28,7 @@ import { ref } from 'vue'
       </div>
       
       <div class="navbar-cta desktop-nav">
-        <button>Let's chat <span class="arrow"> →</span></button>
+        <button @click="scrollToContact">Let's chat <span class="arrow"> →</span></button>
       </div>
     </nav>
     

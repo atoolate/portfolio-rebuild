@@ -42,7 +42,7 @@ const props = defineProps({
         coverImage="https://placehold.co/600x300"
         projectId="project-2"
         description="A React Native app helping students stay focused using science, gamification and social features."
-        :techStack="['React Native', 'Firebase', 'TypeScript']"
+        :techStack="['React Native', 'PostgreSQL', 'Expo Go']"
       />
       <Folder
         title="vuejs-portfolio"
@@ -56,7 +56,7 @@ const props = defineProps({
         coverImage="https://placehold.co/600x300"
         projectId="project-4"
         description="An AI webapp using Langchain AI agents to generate personalized cold emails based on campaign goals and uploaded lead list."
-        :techStack="['LangChain', 'Python', 'OpenAI']"
+        :techStack="['LangChain', 'Next.js', 'OpenAPI']"
         :comingSoon="true"
       />
     </div>
@@ -66,7 +66,6 @@ const props = defineProps({
 <style scoped>
 .work-overview {
   padding: 40px 20px;
-  margin-bottom: var(--section-spacing);
   background: var(--background-color);
 }
 
