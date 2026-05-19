@@ -1,10 +1,10 @@
 <template>
   <section id="contact" class="contact-section">
     <div class="contact-content">
-      <h2>Let's work together</h2>
+      <h2>Let's build something</h2>
       <p class="contact-description">
-        Open to full-time opportunities and interesting projects. 
-        Drop me a line if you think we'd be a good fit.
+        Looking for a small team that ships real products.
+        If that sounds like yours, say hi.
       </p>
       
       <div class="contact-action">

@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import Navbar from '../components/Navbar.vue'
 import Hero from '../components/Hero.vue'
+import Pillars from '../components/Pillars.vue'
 import WorkOverview from '../components/WorkOverview.vue'
 import AboutMe from '../components/AboutMe.vue'
 import Contact from '../components/Contact.vue'
@@ -23,13 +24,14 @@ const closeTerminal = () => {
     <main>
       <div class="hero-container">
         <Hero @open-terminal="openTerminal" />
-        <AboutMe 
-          v-if="isTerminalVisible" 
+        <AboutMe
+          v-if="isTerminalVisible"
           @close-terminal="closeTerminal"
         />
       </div>
-        
-        <WorkOverview />
+
+      <Pillars />
+      <WorkOverview />
     </main>
     <Contact />
   </body>

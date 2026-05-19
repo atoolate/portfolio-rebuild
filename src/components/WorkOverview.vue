@@ -19,7 +19,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="work-overview">
+  <div id="work" class="work-overview">
     <!-- Section Header -->
     <div class="section-header">
       <h2 class="section-title">
@@ -31,33 +31,40 @@ const props = defineProps({
 
     <div class="projects-grid">
       <Folder
+        title="worldcup-predictions"
+        coverImage="https://placehold.co/600x300/14080E/FF674D?text=World+Cup"
+        projectId="project-5"
+        description="A private World Cup 2026 prediction league. Next.js + TypeScript + Supabase with realtime standings, exact-score scoring engine, RLS, and a swappable football-data.org provider."
+        :techStack="['Next.js', 'TypeScript', 'Supabase']"
+      />
+      <Folder
         title="3d-sneakershop"
         coverImage="src/assets/work/sneakershop.png"
         projectId="project-1"
-        description="A Threejs 3D sneaker configurator, Nodejs API and real-time admin dashboard with live updates."
+        description="Fullstack e-commerce with a Three.js 3D sneaker configurator, Node API, and a realtime admin dashboard."
         :techStack="['Three.js', 'Node.js', 'MongoDB']"
       />
       <Folder
         title="social-study-app"
         coverImage="https://placehold.co/600x300"
         projectId="project-2"
-        description="A React Native app helping students stay focused using science, gamification and social features."
+        description="React Native app that turns study sessions into a social, gamified loop — Pomodoro + streaks + leaderboard."
         :techStack="['React Native', 'PostgreSQL', 'Expo Go']"
-      />
-      <Folder
-        title="vuejs-portfolio"
-        coverImage="https://placehold.co/600x300"
-        projectId="project-3"
-        description="A Vuejs portfolio website with attention to design and UI/UX to showcase my work and skills."
-        :techStack="['Vue.js', 'Vite', 'CSS3']"
       />
       <Folder
         title="ai-coldemail-generator"
         coverImage="https://placehold.co/600x300"
         projectId="project-4"
-        description="An AI webapp using Langchain AI agents to generate personalized cold emails based on campaign goals and uploaded lead list."
-        :techStack="['LangChain', 'Next.js', 'OpenAPI']"
+        description="Built for the problem I lived for two years. LangChain agents that generate personalized outreach from campaign goals and lead data."
+        :techStack="['LangChain', 'Next.js', 'OpenAI']"
         :comingSoon="true"
+      />
+      <Folder
+        title="vuejs-portfolio"
+        coverImage="https://placehold.co/600x300"
+        projectId="project-3"
+        description="This site. Built from scratch with Vue 3 + Vite — terminal aesthetic, Finder grid, no template."
+        :techStack="['Vue 3', 'Vite', 'CSS3']"
       />
     </div>
   </div>

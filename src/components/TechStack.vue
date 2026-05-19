@@ -1,7 +1,7 @@
 <template>
   <section class="tech-stack">
     <div class="section-container">
-      <h2 class="section-title">Technology Stack</h2>
+      <h2 class="section-title">Tech Stack</h2>
       <div class="tech-grid">
         <div 
           v-for="tech in techStack" 

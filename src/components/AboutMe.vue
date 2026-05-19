@@ -24,18 +24,17 @@
       
       <div class="terminal-content">
         <div class="terminal-prompt">
-          <span class="prompt-symbol">$</span>
+          <span class="prompt-user">alex@alexdl.be</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-symbol">$</span>
           <span class="prompt-command">cat journey.log</span>
         </div>
-        
-        <div v-for="(line, index) in journey" :key="index" class="log-entry">
-          <span class="timestamp">[{{ line.date }}]</span>
+
+        <div v-for="(line, i) in journey" :key="`j-${i}`" class="log-entry">
           <span class="arrow">→</span>
-          <span class="message">{{ line.message }}</span>
+          <span class="message">{{ line }}</span>
         </div>
-        
+
         <div class="terminal-prompt current">
-          <span class="prompt-symbol">$</span>
+          <span class="prompt-user">alex@alexdl.be</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-symbol">$</span>
           <span class="cursor">_</span>
         </div>
       </div>
@@ -54,12 +53,13 @@ import { ref, onMounted, onUnmounted, defineEmits } from 'vue'
 const emit = defineEmits(['close-terminal'])
 
 const journey = [
-  { date: '2018–2021', message: 'Completed BA in Media & Entertainment Business' },
-  { date: '2022-2023', message: 'Worked as sales consultant for multiple startups and scale-ups' },
-  { date: '2023-2025', message: 'Launched Outbound Unicorns (cold email GTM agency for startups)' },
-  { date: '2023-2025', message: 'Completed BA in Information Management - Digital Experience Design' },
-  { date: '2023', message: 'Started building and shipping fullstack projects' },
-  { date: 'Now', message: 'Looking to join a great team fulltime and keep building cool stuff' },
+  'Studied Media & Entertainment Business — figured out I liked the business side of products',
+  'SDR for B2B tech companies — selling software across the EU',
+  'Founded Outbound Unicorns — outbound systems and n8n automations for early-stage startups',
+  'Back to school for Digital Experience Design (distinction)',
+  'First dev job as a Fullstack AI Developer — TypeScript, multi-LLM, Claude Code and Codex every day',
+  'Expanded into more client-facing work — intake meetings, scoping, automation builds',
+  'Now looking for a small team building real AI-native products',
 ];
 
 // Window state
@@ -333,6 +333,22 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+}
+
+.prompt-user {
+  color: #5ecc62;
+  font-weight: 500;
+}
+
+.prompt-sep {
+  color: #e0e0e0;
+  margin: 0 -6px;
+}
+
+.prompt-path {
+  color: #4d9eff;
+  font-weight: 500;
 }
 
 .terminal-prompt.current {
@@ -360,27 +376,20 @@ onUnmounted(() => {
 }
 
 .log-entry {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  padding: 4px 0;
-  transition: all 0.2s ease;
+  gap: 10px;
+  padding: 3px 0;
+  transition: background 0.2s ease, padding 0.2s ease;
+  border-radius: 4px;
 }
 
 .log-entry:hover {
-  background: rgba(255, 103, 77, 0.05);
-  border-radius: 4px;
+  background: rgba(255, 103, 77, 0.06);
   padding-left: 8px;
   margin-left: -8px;
   margin-right: -8px;
-}
-
-.timestamp {
-  color: #888;
-  font-weight: 500;
-  flex-shrink: 0;
-  min-width: 100px;
 }
 
 .arrow {
@@ -392,7 +401,9 @@ onUnmounted(() => {
 .message {
   color: #e0e0e0;
   flex: 1;
+  line-height: 1.5;
 }
+
 
 /* Mobile responsiveness - disable dragging/resizing on mobile */
 @media (max-width: 768px) {
@@ -423,14 +434,6 @@ onUnmounted(() => {
     height: auto;
   }
   
-  .log-entry {
-    flex-direction: column;
-    gap: 4px;
-  }
-  
-  .timestamp {
-    min-width: auto;
-  }
 }
 
 @media (max-width: 480px) {

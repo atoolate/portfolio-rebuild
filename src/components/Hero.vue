@@ -12,15 +12,21 @@ const openTerminal = () => {
 <template>
   <div class="hero">
     <h1>
-      Full-stack web developer combining <span>modern web skills</span> with <span>startup-tested</span> grit, 
-      <span>self-learning</span>, and experience taking <span>ownership</span> and delivering under pressure in <span>fast-paced</span> teams.
+      <span>Product-minded</span> developer building <span>AI-powered apps and integrations</span>.
     </h1>
-    
+    <p class="hero-subtitle">
+      I'm a fullstack developer with a background in sales and GTM, which still shapes how I approach software today. I naturally think about <span>the product, the user and the workflow</span> before I think about the implementation.
+    </p>
+
     <div class="hero-actions">
+      <a href="#work" class="work-link">
+        View work
+        <span class="arrow">→</span>
+      </a>
       <button class="terminal-trigger" @click="openTerminal">
         <span class="terminal-icon">$</span>
-        View my journey
-        <span class="hint">→ Click to open</span>
+        journey.log
+        <span class="hint">→ open</span>
       </button>
     </div>
     <Banner />
@@ -49,6 +55,53 @@ const openTerminal = () => {
 
 .hero-actions {
   margin: 2rem 0;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.55;
+  margin: 1rem 0 0 0;
+  font-weight: 300;
+  font-family: 'Cabin', sans-serif;
+  max-width: 50ch;
+}
+
+.hero-subtitle span {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.work-link {
+  background: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.work-link:hover {
+  background: transparent;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 103, 77, 0.2);
+}
+
+.work-link .arrow {
+  font-weight: 600;
 }
 
 /* Additional mobile spacing for when terminal is open */
