@@ -10,7 +10,7 @@ const pillars = [
   },
   {
     slug: '/ development',
-    body: 'Fullstack TypeScript day to day — Node, n8n, Supabase, webhook orchestration, CRM and ERP integrations.',
+    body: 'Fullstack TypeScript day to day — Node, n8n, PostgreSQL, webhook orchestration, CRM and ERP integrations.',
   },
   {
     slug: '/ ai-native',
